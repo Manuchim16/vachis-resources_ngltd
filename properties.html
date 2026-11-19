@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Properties - Vachis Resources Ltd</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <div class="logo-icon"><span>VR</span></div>
+        <div class="logo-text">
+            <h1>VACHIS RESOURCES NIG LTD</h1>
+            <p>Real Estate & Beyond</p>
+        </div>
+
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="properties.html">Properties</a>
+        <a href="properties-manager.html">Manager Portal</a>
+    </nav>
+</header>
+
+<div class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1400') center/cover; color: white; text-align: center; padding: 70px 20px;">
+    <h2>Complete Property Catalog</h2>
+    <p>Browse all 36 available real estate options across Lagos and Rivers State</p>
+</div>
+
+<div class="filter-bar" style="margin-top: 30px;">
+    <select id="filterType" onchange="filterProperties()">
+        <option value="all">All Types</option>
+        <option value="flat">Flat / Apartment</option>
+        <option value="duplex">Duplex</option>
+        <option value="terrace">Terrace</option>
+        <option value="land">Land</option>
+        <option value="bungalow">Bungalow</option>
+        <option value="office">Office Space</option>
+    </select>
+    <select id="filterStatus" onchange="filterProperties()">
+        <option value="all">For Sale & Rent</option>
+        <option value="sale">For Sale</option>
+
+        <option value="rent">For Rent</option>
+    </select>
+    <select id="filterLocation" onchange="filterProperties()">
+        <option value="all">All Locations</option>
+        <option value="Lagos">Lagos</option>
+        <option value="Rivers">Rivers</option>
+        <option value="Other States">Others</option>
+    </select>
+    <button onclick="resetFilters()">Reset Filters</button>
+</div>
+
+<div class="results-bar">
+    <p>Showing <span id="resultCount">36</span> properties</p>
+</div>
+
+<div class="properties-section">
+
+    <div class="cards-grid" id="propertiesGrid">
+        {/* Rendered dynamically via script.js */}
+    </div>
+    
+    <!-- PAGINATION CONTROLS -->
+    <div class="pagination-container" id="paginationControls" style="display: flex; justify-content: center; gap: 8px; margin-top: 40px;">
+    </div>
+</div>
+
+<!-- ENQUIRY MODAL -->
+<div id="modalOverlay" class="modal-overlay">
+    <div class="modal">
+<button type="button" class="modal-close" onclick="closeModal()">X</button>
+        <h3>Make an Enquiry</h3>
+
+        <p class="modal-property" id="modalPropertyName"></p>
+        <div class="modal-form" id="modalForm">
+            <input type="text" id="enquiryName" placeholder="Full Name" >
+            <input type="tel" id="enquiryPhone" placeholder="Phone Number" >
+            <input type="email" id="enquiryEmail" placeholder="Email Address" >
+
+            <select id="enquiryType">
+                <option value="">I am intested in...</option>
+                <option value="buying">Buying this property</option>
+                <option value="renting">Renting this property</option>
+                <option value="inspection">Scheduling an inspection</option>
+                <option value="more-info">Getting more information</option>
+            </select>
+            <textarea placeholder="Any additional questions or requirements?" id="enquiryMessage"></textarea>
+            <button type="button" onclick="submitEnquiry(event)">Submit Enquiry</button>
+        </div>
+        <div id="successMsg" class="success-msg">
+            <div class="checkmark">✅</div>
+            <h3>Enquiry Submitted</h3>
+            <p>Thank you! Our team will contact you within 24 hours regarding your interest in this property.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-bottom">
+        <p>© 2026 <span>Vachis Resources Nig Ltd</span>. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

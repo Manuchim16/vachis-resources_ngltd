@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Vachis Resources Nig. Ltd. - Real Estate, Interior Design and Property Solutions.">
+    <title>Vachis Resources Ltd - Property & Interior Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <div class="logo-icon"><span>VR</span></div>
+        <div class="logo-text">
+            <h1>VACHIS RESOURCES NIG LTD</h1>
+            <p>Real Estate & Beyond</p>
+        </div>
+
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="properties.html">Properties</a>
+        <a href="#interiors">Interiors</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="properties-manager.html">Manager Portal</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <span>Rivers & Lagos</span>
+    <h2>Premium Properties &<br>Stunning Interiors</h2>
+    <p>Find your dream home and transform your space with Vachis Resources</p>
+    <div class="hero-btns">
+
+        <button class="btn-primary" onclick="window.location.href='properties.html'">View Properties</button>
+        <button class="btn-outline" onclick="document.getElementById('interiors').scrollIntoView({behavior:'smooth'})">Our Portfolio</button>
+    </div>
+</div>
+
+<div class="stats">
+    <div class="stat"><h3>120+</h3><p>Properties Listed</p></div>
+    <div class="stat"><h3>85+</h3><p>Happy Clients</p></div>
+    <div class="stat"><h3>40+</h3><p>Interior Projects</p></div>
+    <div class="stat"><h3>4+</h3><p>Years Experience</p></div>
+</div>
+
+<div class="listings-section" 
+
+id="properties">
+    <div class="section-title">
+        <h2>Featured Properties</h2>
+        <p>Explore a sample of our latest listings across Nigeria</p>
+        <div class="underline"></div>
+    </div>
+    <div class="cards-grid" id="featuredGrid">
+        <!-- Rendered dynamically by script.js -->
+    </div>
+    <div class="view-all">
+        <button type="button" onclick="window.location.href='properties.html'">View All 36 Properties</button>
+    </div>
+</div>
+
+
+<div class="map-section" id="location-map" style="padding: 70px 40px; background: #fff; text-align: center;">
+    <div class="section-title">
+        <h2>Property & Office Locations</h2>
+        <p>Visit our operational zones across Lagos and Rivers State</p>
+        <div class="underline"></div>
+    </div>
+    <div style="max-width: 100px; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=3.45%2C6.43%2C3.5%2C6.47&amp;layer=mapnik" width="100%" height="100" style="border:0;" loading="lazy"></iframe>
+    </div>
+</div>
+
+<div class="interior-section" id="interiors">
+    <div class="section-title">
+
+        <h2>Interior Design Portfolio</h2>
+        <p>Transforming spaces into beautiful, functional environments</p>
+        <div class="underline"></div>
+    </div>
+    <div class="design-grid">
+        <div class="design-card">
+        <img src="images/living room.jpg" alt="Living Room">
+            <div class="design-overlay"><h3>Modern Living Room</h3><p>Residential Design</p></div>
+        </div>
+        <div class="design-card">
+            <img src="images/kitchen.jpg" alt="Kitchen">
+            <div class="design-overlay"><h3>Luxury Kitchen</h3><p>Kitchen Renovation</p></div>
+        </div>
+        <div class="design-card">
+            <img src="images/master bedroom.jpg" alt="Bedroom">
+            <div class="design-overlay"><h3>Master Bedroom</h3><p>Bedroom Design</p></div>
+        </div>
+        <div class="design-card">
+            <img src="images/office.webp" alt="Office">
+            <div class="design-overlay"><h3>Corporate Office</h3><p>Commercial Design</p></div>
+        </div>
+        <div class="design-card">
+            <img src="images/dining room.jpg" alt="Dining">
+            <div class="design-overlay"><h3>Dining Area</h3><p>Residential Design</p></div>
+        </div>
+        <div class="design-card">
+            <img src="images/bathroom.jpg" alt="Bathroom">
+            <div class="design-overlay"><h3>Modern Bathroom</h3><p>Bathroom Renovation</p>
+            </div>
+</div>
+
+<div class="services-section" id="services">
+    <div class="section-title">
+        <h2>Our Services</h2>
+        <p>Comprehensive solutions for all your real estate and falacity needs</p>
+        <div class="underline"></div>
+    </div>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-icon">🏠</div>
+            <h3>Real Estate</h3>
+            <p>Property sales, acquisition and development across Nigeria</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">🛋️</div>
+            <h3>Interior Design</h3>
+            <p>Complete interior design and furnishing for homes and offices</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">🔧</div>
+            <h3>Facilities Management</h3>
+            <p>End-to-end project management for construction and renovation</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">📋</div>
+            <h3>Project Management</h3>
+            <p>Full property renovation and remodeling services</p>
+        </div>
+         <div class="service-card">
+            <div class="service-icon">⚓</div>
+            <h3>Marine & Logistics</h3>
+            <p>Marine and land logistics services across Rivers State</p>
+         </div>
+          <div class="service-card">
+            <div class="service-icon">🛒</div>
+            <h3>Procurement</h3>
+            <p>Professional procurement and supply chain management</p>
+          </div>
+        <div class="service-card">
+            <div class="service-icon">📋</div>
+
+            <h3>Agrifoods</h3>
+            <p>Agricultural food production and supply services</p>
+        </div>
+    </div>
+</div>
+
+<div class="about-section" id="about">
+    <div class="about-content">
+        <div class="about-text">
+            <h2>About <span>Vachis Resources</span><br>Nig. Ltd.</h2>
+            <p>Vachis Resources Ltd is one of the fastest-growing real estate firms in Nigeria, offering real value and committed to customer satisfaction. Fuelled by ideas, expertise and dedication, we have created real estate solutions to prepare our clients for what's next. Founded by Joy Evans-Chiokwa.</p>
+            <p>We put clients at the centre of everything i.e taking a personal approach to connect them with the property, whether residential or commercial.</p>
+        </div>
+        <img class="about-img" src="images/About.png" alt="About Us">
+    </div>
+</div>
+
+<div class="contact-section" id="contact">
+    <div class="section-title">
+        <h2>Get In Touch</h2>
+        <p>Reach out to our offices in Lagos or Port Harcourt</p>
+        <div class="underline"></div>
+    </div>
+    <div class="contact-grid">
+        <div class="contact-info">
+
+            <h3>🏢 Head Office</h3>
+            <p><strong>Address</strong>41, Ohia Street, Off Eastern Bypass,<br>Amadi Flat, Port Harcourt, Rivers State.</p>
+            <p><strong>Phone</strong>08101365565</p>
+            <p><strong>Eoail</strong>vachis.resources_ngltd@yahoo.com</p>
+            <br>
+            <h3>🏢 Branch Office</h3>
+            <p><strong>Address</strong>Chief Chuks Ikokwu Street,<br>Lekki Gardens Phase 5 Exstension,<br>Ajah-Lekki, Lagos</p>
+            <p><strong>Phone</strong>08116455897</p>
+        </div>
+        <div class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+            <input type="text" placeholder="Your Full Name" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="email" placeholder="Email Address">
+            <textarea placeholder="Tell us what you're looking for..."></textarea>
+            <button type="submit">Send 
+
+Message</button>
+        </div>
+    </div>
+</div>
+
+<div class="manager">
+<button onclick="window.location.href='properties-manager.html'">Manager ➡</button>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h3>VACHIS RESOURCES NIG. LTD.</h3>
+            <P>Real Estate & Beyond</P>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#properties">Properties</a>
+        <a href="#interiors">Interiors</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-links">
+            <h4>Services</h4>
+        <a href="#">Real Estate</a>
+        <a href="#">Interior Design</a>
+        <a href="#">Facilities Mantainance</a>
+        <a href="#">Marine Logistics</a>
+        </div>
+        <div class="footer-links">
+            <h4>Contact</h4>
+            <a href="#">0810 136 5565, 0811 645 5897</a>
+            <a href="#">vachis.resources_ngltd@yahoo.com</a>
+            <a href="#">Port Harcourt, Rivers State</a>
+            <a href="#">Ajah-Lekki, Lagos State</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 <span>Vachis Resources Nig Ltd</span>. All rights reserved. | Port Harcourt, Rivers State, Nigeria</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Manager | Vachis Resources</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: #f7f7f7;">
+
+<header>
+    <div class="logo">
+        <div class="logo-icon"><span>VR</span></div>
+        <div class="logo-text">
+            <h1>VACHIS RESOURCES</h1>
+            <p>Admin Portal</p>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="properties.html">Properties</a>
+        <a href="properties-manager.html">Manager Portal</a>
+    </nav>
+</header>
+
+<main class="manager-page" style="padding: 40px 5%;">
+    <div class="manager-header" style="text-align:center; margin-bottom: 30px;">
+        <h1>Property <span>Dashboard</span></h1>
+        <p>Manage listings, update availability status, and add new properties.</p>
+    </div>
+
+    <section class="manager-stats" style="display:grid; grid-template-columns: 
+
+repeat(4, 1fr); gap: 20px; margin-bottom: 30px;">
+        <div class="manager-stat" style="background:#fff; padding:20px; border-radius:8px; text-align:center;"><h3 id="statTotal" style="color:#e74c3c; font-size:28px;">36</h3><p>Total Properties</p></div>
+        <div class="manager-stat" style="background:#fff; padding:20px; border-radius:8px; text-align:center;"><h3 id="statAvail" style="color:#2ecc71; font-size:28px;">30</h3><p>Available</p></div>
+        <div class="manager-stat" style="background:#fff; padding:20px; border-radius:8px; text-align:center;"><h3 id="statPend" style="color:#f39c12; font-size:28px;">4</h3><p>Pending</p></div>
+        <div class="manager-stat" style="background:#fff; padding:20px; border-radius:8px; text-align:center;"><h3 id="statSold" style="color:#7f8c8d; font-size:28px;">2</h3><p>Sold</p></div>
+    </section>
+
+    <div id="managerMessage" style="display:none; padding:12px; margin-bottom:20px; border-radius:6px;"></div>
+
+    <section class="manager-section" style="background:#fff; padding:30px; border-radius:10px; margin-bottom:30px;">
+        <h2>Add New Property</h2>
+        <form id="propertyForm" class="property-form" onsubmit="addNewProperty(event)" style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; margin-top:15px;">
+            <input type="text" id="propName" placeholder="Property Name" required style="padding:10px; border:1px solid #ddd; border-radius:5px;">
+            <input type="text" id="propLocation" placeholder="Location (e.g., Lekki, Lagos)" 
+
+required style="padding:10px; border:1px solid #ddd; border-radius:5px;">
+            <select id="propType" required style="padding:10px; border:1px solid #ddd; border-radius:5px;">
+                <option value="flat">Apartment / Flat</option>
+                <option value="duplex">Duplex</option>
+                <option value="terrace">Terrace</option>
+                <option value="land">Land</option>
+                <option value="bungalow">Bungalow</option>
+                <option value="office">Office Space</option>
+            </select>
+            <input type="number" id="propPrice" placeholder="Price in NGN (e.g. 45000000)" required style="padding:10px; border:1px solid #ddd; border-radius:5px;">
+
+            <select id="propStatus" style="padding:10px; border:1px solid #ddd; border-radius:5px;">
+                <option value="Available">Available</option>
+                <option value="Pending">Pending</option>
+                <option value="Sold">Sold</option>
+            </select>
+            <input type="text" id="propAgent" placeholder="Assigned Agent" required style="padding:10px; border:1px solid #ddd; border-radius:5px;">
+            <button type="submit" style="grid-column: span 2; background:#e74c3c; color:white; border:none; padding:12px; border-radius:5px; cursor:pointer; font-weight:bold;">+ Add Property</button>
+        </form>
+    </section>
+
+    <section class="manager-section" 
+
+style="background:#fff; padding:30px; border-radius:10px;">
+        <h2>Current Managed Listings</h2>
+        <div style="overflow-x:auto; margin-top:15px;">
+            <table style="width:100%; border-collapse: collapse;" class="property-table">
+                <thead>
+                    <tr style="background:#222; color:white;">
+                        <th style="padding:12px; text-align:left;">Name</th>
+                        <th style="padding:12px; text-align:left;">Location</th>
+                        <th style="padding:12px; text-align:left;">Type</th>
+                        <th style="padding:12px; text-align:left;">Price</th>
+                        <th style="padding:12px; text-align:left;">Status</th>
+                        <th style="padding:12px; text-align:left;">Actions</th>
+
+                    </tr>
+                </thead>
+                <tbody id="managerTableBody">
+                    <!-- Populated by script.js -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
